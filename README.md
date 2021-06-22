@@ -650,9 +650,57 @@
 
 - Date
 
+    Date类表示日期和时间，里面封装了操作日期和时间的方法。Date类经常用来获取系统当前时间。
+
+    Date() 构造一个 Date 对象并对其进行初始化以反映当前时间
+    
+    Date(long date)	构造一个 Date 对象，并根据相对于 GMT 1970 年 1 月 1 日 00:00:00 的毫秒数对其进行初始化
+
 - Math
+
+    Math 类在 java.lang 包中，包含用于执行基本数学运算的方法，比如初等指数、对数、平方根和三角函数。
+    |  方法   | 返回值  | 功能描述  |
+    |  :----:  | :----:  | :----:  |
+    | sin(double numvalue)  | double | 计算角 numvalue 的正弦值  |
+    |  cos(double numvalue) | double | 计算角 numvalue 的余弦值  |
+    | pow(double a, double b)  | double | 计算 a 的 b 次方  |
+    | sqrt(double numvalue)  | double | 计算给定值的正平方根  |
+    | ceil(double numvalue)  | double | 返回大于等于 numvalue 的最小整数值  |
+    | abs(int numvalue)  | int | 计算 int 类型值 numvalue 的绝对值，也接收 long、float 和 double 类型的参数  |
+    | floor(double numvalue)  | double | 返回小于等于 numvalue 的最大整数值  |
+    | max(int a, int b)  | int | 返回 int 型 a 和 b 中的较大值，也接收 long、float 和 double 类型的参数  |
+    | min(int a, int b)  | int | 返回 a 和 b 中的较小值，也可接受 long、float 和 double 类型的参数 |
+    | rint(double numvalue)  | double | 返回最接近 numvalue 的整数值 |
+    | round(T arg)  | arg 为 double 时返回 long，为 float 时返回 int | 返回最接近 arg 的整数值 |
+    | random()  | double | 返回带正号的 double 值，该值大于等于 0.0 且小于 1.0 |
+
+    上面都是一些常用方法，如果用到如极坐标、对数等，就可以去查一查手册！
 
 - Ssystem
 
+    System 类提供了以下功能：
+    + 标准输入，标准输出和错误输出流；
+    + 访问外部定义的属性和环境变量；
+    + 加载文件和库的方法；
+    + 以及用于快速复制数组的实用方法。
+
+    System 不可以被实例化，只可以使用其静态方法。例：
+    ```java
+    //从指定的源数组中复制一个数组，从源数组指定的位置开始，到目标数组指定的位置
+    public static void arrarycopy(Object src, int srcPos, Object dest, int desPos, int length)
+    //返回以毫秒为单位的当前时间（从1970年到现在的毫秒数）
+    public static long currentTimeMillis()
+    //终止当前正在运行的 Java 虚拟机 status 为 0 时推出
+    public static void exit(int status)
+    // 运行垃圾收集器
+    public static void gc()
+    // 取得当前系统的全部属性
+    public static Properties getProperties()
+    // 获取指定键的系统属性
+    public static String getProperty(String key)
+    ```
 - Random
+
+    Random 类用于生成伪随机数流，在 java.util 包下。
+    
 
